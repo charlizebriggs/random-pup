@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background Styling */
+body {
+  font-family: "Fantasy", impact;
+  background: linear-gradient(
+    135deg,
+    #7c001f,
+    #36007c
+  ); /* Gradient background */
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* App Container */
+.App {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9); /* Transparent white for contrast */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.432); /* Slightly stronger shadow */
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Title Styling */
+h1 {
+  font-size: 3rem;
+  color: #880054;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.774);
+}
+
+/* Button Styles */
+button {
+  background-color: #680268;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+  background-color: #5f0475;
+}
+
+/* Content Layout: Flex */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grid Layout for Image & Description */
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  background-color: #700161;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* Image Styling */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  max-width: 250px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
